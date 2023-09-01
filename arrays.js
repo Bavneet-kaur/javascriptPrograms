@@ -37,6 +37,10 @@ fruits.sort(); // sorting array
 console.log("Sorted FRUITS: ",fruits);
 fruits[10] = "lemon";
 console.log(fruits);
+/*ort() method sometimes returns incorrect result with numbers 
+for that we use compare */
+let fr = [1,23,54,2,15,32,100];
+console.log('sorted array of numbers: ',fr.sort(function(a,b){return b-a}));
 // converting arrays to string
 var f = fruits.toString();
 console.log(f);
@@ -56,6 +60,12 @@ let del = delete num[2]
 console.log(num);
 console.log(num[2]);
 console.log(del)
+// using concat method
+let a1 = ['lara',23,65,12];
+let a2 = [23,45,89];
+let a3 =[9,90,99,0,'Leo','lemon'];
+let a = a1.concat(a2,a3)
+console.log(a);
 // nested arrays
 // var user =[[1, 'fox'], [2,'leo'], [378]];
 // /*--access different values from nested arrays--*/
