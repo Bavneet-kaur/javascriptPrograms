@@ -1,0 +1,8 @@
+Flash Cards:
+When we use the cat command with a file that has lots of lines, the entire screen will be flooded with lines and we will be able to read only the last portion of the file. In such a case, we can use the less command to read the file contents one page at a time.  For example, to open a large file spells.txt, type less spells.txt on the command line. 
+
+ 
+
+Now, we can move up & down in the file and exit less by pressing q. With the less command, there are no lines displayed on the screen, and our terminal remains clean and pristine.
+
+There is also more command which was used in the 90s, but the less command has more friendly features.  
