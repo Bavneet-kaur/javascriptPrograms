@@ -6,3 +6,4 @@ When we use the cat command with a file that has lots of lines, the entire scree
 Now, we can move up & down in the file and exit less by pressing q. With the less command, there are no lines displayed on the screen, and our terminal remains clean and pristine.
 
 There is also more command which was used in the 90s, but the less command has more friendly features.  
+lalalalalalalalaallalalalallllllllllllllll
