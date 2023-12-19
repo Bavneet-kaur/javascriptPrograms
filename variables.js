@@ -39,6 +39,13 @@ var x = 989999899998999n;
 var y = BigInt(9899998999989991111111111111111);
 console.log(x + y);
 x = BigInt(Number.MAX_SAFE_INTEGER)
-console.log("BigIntNum: " ,x + 5n);
 var eq = 9007199254740992 === 9007199254740993;
+console.log("BigIntNum: " ,x + 5n);
 console.log(eq);
+// usage of operators
+let n = 10;
+console.log("The value of n is: ",n);
+console.log("Value of n is: ", --n);
+console.log("The value of n is: ",n);
+console.log("Value of n is: ", n++);
+console.log("The value of n is: ",n);

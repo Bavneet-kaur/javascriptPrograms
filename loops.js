@@ -11,13 +11,22 @@ for(let i=0; i<6; i++){
 }
 // adding n natural numbers using for loops
 const prompt=require("prompt-sync")({sigint:true});
-let sum =0;
+let sum = 0;
 let n = prompt("Enter the value of n = ");
 n = Number.parseInt(n);
-for(i=1; i<=n; i++){
-    sum = sum + i;
+for(let i=1; i<=n; i++){
+    console.log(i , "+")
+    sum = sum + (i);
 }
 console.log("Sum of"+ " "+ n + " "+ "natural numbers: ", sum);
+// JavaScript doesn't care. Expression 1 is optional.
+// You can initiate many values in expression 1 (separated by comma):
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i];
+}
+console.log(text,"<br>");
 /*for-in loop -- iterates over the object properties*/
 let person = {
     name: 'Rohit',

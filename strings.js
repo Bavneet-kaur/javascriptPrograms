@@ -1,8 +1,17 @@
 'use strict';
-// strings
 var txt = "Hi! This is me feeling boring because and restless." +
 "learning new vocalbulary words and their pronunciation";
 console.log(txt);
+// string templates -- string interpolation
+let firstName = "John";
+let lastName = "Doe";
+let text = `Welcome ${firstName}, ${lastName}!`;
+// Template literals allow expressions in strings:
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+document.getElementById("demo").innerHTML = total;
 console.log("Hi! This is me feeling boring");
 // Unicode  code point escapes
 var org = "Sentinel Design \u{1F642}"; /*smilely unicode*/

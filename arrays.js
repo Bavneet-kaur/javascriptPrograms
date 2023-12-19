@@ -1,71 +1,94 @@
-'use strict';
+"use strict";
 
-let fruits = ["apple","banana","chikko","grapes"];
+let fruits = ["apple", "banana", "chikko", "grapes"];
 console.log(typeof fruits); /*--'object'--*/
 // to detect arrays we use instanceof operator - solution01
-console.log("solution - 01",fruits instanceof Array); 
-// to detect arrays we use instanceof operator - solution02
-console.log("solution - 02",Array.isArray(fruits)); 
+console.log("solution - 01", fruits instanceof Array);
+// to detect arrays we use Array.isArray operator - solution02
+console.log("solution - 02", Array.isArray(fruits));
 // using for loop to print the values of an array
 let len = fruits.length;
-for(let i = 0;i<len;i++){
-    console.log( i+1 +" - "+ fruits[i]);
+for (let i = 0; i < len; i++) {
+  console.log(i + 1 + " - " + fruits[i]);
 }
 // using for-of loop
-for(let items of fruits){
-    console.log(items);
+for (let items of fruits) {
+  console.log(items);
 }
 // accessing the values of the Array "fruits".
 console.log(`I like ${fruits[0]}`);
 console.log(`I love ${fruits[3]}`);
-console.log("Length of fruits array:",fruits.length);
+console.log("Length of fruits array:", fruits.length);
 
 // dynamic acessing of values
 console.log(`Let's have a ${fruits[fruits.length - 2]} milkshake!`);
 // adding elements to the array
-console.log("FRUITS: ",fruits);
-fruits.push("cherry","melon");
-console.log("FRUITS: ",fruits);
-console.log("again detecting array: ",Array.isArray(fruits)); 
-console.log("new length of the new array:",fruits.length);
-fruits[6] = "guava"; 
+console.log("FRUITS: ", fruits);
+fruits.push("cherry", "melon");
+console.log("FRUITS: ", fruits);
+console.log("again detecting array: ", Array.isArray(fruits));
+console.log("new length of the new array:", fruits.length);
+fruits[6] = "guava";
 fruits[9] = "guava"; /*--this will 2 undefiened holes--*/
-console.log("FRUITS: ",fruits);
-console.log("new length :",fruits.length);
+console.log("FRUITS: ", fruits);
+console.log("new length :", fruits.length);
 /*array methods*/
 fruits.sort(); // sorting array
-console.log("Sorted FRUITS: ",fruits);
+console.log("Sorted FRUITS: ", fruits);
 fruits[10] = "lemon";
 console.log(fruits);
 /*ort() method sometimes returns incorrect result with numbers 
 for that we use compare */
-let fr = [1,23,54,2,15,32,100];
-console.log('sorted array of numbers: ',fr.sort(function(a,b){return b-a}));
+let fr = [1, 23, 54, 2, 15, 32, 100];
+console.log(
+  "sorted array of numbers: ",
+  fr.sort(function (a, b) {
+    return b - a;
+  })
+);
 // converting arrays to string
 var f = fruits.toString();
 console.log(f);
-let n = [12,43,11,9,89];
+let n = [12, 43, 11, 9, 89];
 console.log(n);
 console.log(n.pop());
 console.log(n);
 let sh = n.shift(); /*removes the first element and returns the values*/
-console.log(sh,n);
+console.log(sh, n);
 let ush = n.unshift(56); /*radds the first element and returns the values*/
-console.log(ush,n);
+console.log(ush, n);
 // using delete() array method
-let num = [45,12,76,34,11,90];
+let num = [45, 12, 76, 34, 11, 90];
 console.log(num);
-console.log("Length of num: ",num.length);
-let del = delete num[2]
+console.log("Length of num: ", num.length);
+let del = delete num[2];
 console.log(num);
 console.log(num[2]);
-console.log(del)
+console.log(del);
 // using concat method
-let a1 = ['lara',23,65,12];
-let a2 = [23,45,89];
-let a3 =[9,90,99,0,'Leo','lemon'];
-let a = a1.concat(a2,a3)
+let a1 = ["lara", 23, 65, 12];
+let a2 = [23, 45, 89];
+let a3 = [9, 90, 99, 0, "Leo", "lemon"];
+let a = a1.concat(a2, a3);
 console.log(a);
+// for-in loop within array(not recommended because array works with indexes)
+let numb = [32, 84, 76, 98, 10];
+for (let i of numb) {
+  console.log(numb);
+}
+let arr = [45, 23, 21,12,9,90];
+// Array map method
+let aa = arr.map((value, index, array) => {
+  console.log(value, index, array);
+  return value + index;
+});
+console.log("NewArray(index number added): ",aa);
+// filter function/method
+let over18 = arr.filter(myFunction);
+function myFunction(value,index,array){
+    return value > 18;
+}
+console.log(over18);
 // nested arrays
 // var user =[[1, 'fox'], [2,'leo'], [378]];
 // /*--access different values from nested arrays--*/
@@ -86,7 +109,7 @@ console.log(a);
 // console.log(user[1].name);
 // console.log(user[4]);
 // /*TypeError: Cannot read properties of undefined (reading 'name')*/
-// // console.log(user[5].name); 
+// // console.log(user[5].name);
 
 // // copying/cloning array
 // var admin = user;
@@ -141,7 +164,7 @@ console.log(a);
 //     let output = [];
 //     for (const row of csv.split('\n')) {
 //     // output.push(row); /* this will only convert strings to array
-//     output.push(row.split(', ')); /*this will create different array entities*/ 
+//     output.push(row.split(', ')); /*this will create different array entities*/
 //     }
 //     return output;
 // };

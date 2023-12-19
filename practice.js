@@ -1,77 +1,77 @@
 'USE STRICT'
 // Q1 - Create a variable of type string and try to add a number to it
-// let a = "My name is Bavneet kaur, I will complete my javascript by today!";
-// let b = 32 + 12;
-// let c = a + b;
-// console.log(c);
-// console.log("Hy! There I am Bavneet" + 32 + 12);
-// // Q2 - Use type of operator to find the datatype of the string In last question
-// console.log("Type of the 'c':", typeof(c));
-// // Q3 - Create a const object in javascript Can you change it to hold a 'number later'?
-// const d = {
-//     name: "Bawa",
-//     age: 23,
-//     lic: true
-// };
-// console.log(d);
-// // d = 32;/*this will throw an error*/
-// // console.log(d)
-// // Q4 - Try to add a new key to the Const object in Problem 3 were you able to do it?
-// d['friend'] = 'amar';
-// console.log(d);
-// d['name'] = "loka";
-// console.log(d);
-// // Q5 - Write a Js program to create a word - meaning dictionary of 5 words.
-// const dict = {
-//     appreciate: 'value',
-//     lexically: 'position based dictionary',
-//     kernel: 'aplication between hardware layer and shell(CLI)',
-//     lemon: 'citrus yellow fruit',
-//     ear: 'part of the body'
-// };
-// console.log(dict);
-// // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
-// // install command: npm install prompt-sync
+let a = "My name is Bavneet kaur, I will complete my javascript by today!";
+let b = 32 + 12;
+let c = a + b;
+console.log(c);
+console.log("Hy! There I am Bavneet" + 32 + 12);
+// Q2 - Use type of operator to find the datatype of the string In last question
+console.log("Type of the 'c':", typeof(c));
+// Q3 - Create a const object in javascript Can you change it to hold a 'number later'?
+const d = {
+    name: "Bawa",
+    age: 23,
+    lic: true
+};
+console.log(d);
+// d = 32;   /*this will throw an error*/
+// console.log(d)
+// Q4 - Try to add a new key to the Const object in Problem 3 were you able to do it?
+d['friend'] = 'amar';
+console.log(d);
+d['name'] = "loka";
+console.log(d);
+// Q5 - Write a Js program to create a word - meaning dictionary of 5 words.
+const dict = {
+    appreciate: 'value',
+    lexically: 'position based dictionary',
+    kernel: 'aplication between hardware layer and shell(CLI)',
+    lemon: 'citrus yellow fruit',
+    ear: 'part of the body'
+};
+console.log(dict);
+// Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
+// install command: npm install prompt-sync
 const prompt = require("prompt-sync")({sigint:true});
-// let age = prompt("What is your age?")
-// age = Number.parseInt(age)
-// if(age>10 && age<20){
-//     console.log("Your age lies between 10 and 20")
-// }
-// else{
-//     console.log("Your age doesnt lies between 10 and 20")
-// }
-// // Q7 - Demonstrate the use of switch case statements in JavaScript
-// let day = 'MONDAY';
-// switch (day) {
-//   case 'MONDAY':
-//     console.log('Sad Day...');
-//   case 'TUESDAY':
-//     console.log('Ok Ok Day..');
-//     break;
-//   case 'WEDNESDAY':
-//     console.log('Hump Day!');
-//     break;
-//   case 'THURSDAY':
-//     console.log('Now we are talkin!');
-//     break;
-//   case 'FRIDAY':
-//     console.log('TGIF');
-//   default: {
-//     console.log('Elvis has left the building...');
-//   }
-// }
-// // Q8 - Write a Java Script program to find whether number is Divisible by 2 and 3.
-// n = prompt("Enter your fav number: "); 
-// n = Number.parseInt(n);
-// if(n%2==0 && n%3==0){
-//     console.log("Yes the number "+ n + " is divisible by 2 and 3");
-// }
-// else{
-//     console.log("No! the number " + n + " is not divisible by 2 and 3");
-// }
-// // Q9 - Print " You can Drive" or "You Cannot Drive" based age being greater than 18 using ternary operator
-// let aa = (age >= 18)? "You can drive":"You cannot drive!";
+let age = prompt("What is your age?")
+age = Number.parseInt(age)
+if(age>10 && age<20){
+    console.log("Your age lies between 10 and 20")
+}
+else{
+    console.log("Your age doesnt lies between 10 and 20")
+}
+// Q7 - Demonstrate the use of switch case statements in JavaScript
+let day = 'MONDAY';
+switch (day) {
+  case 'MONDAY':
+    console.log('Sad Day...');
+  case 'TUESDAY':
+    console.log('Ok Ok Day..');
+    break;
+  case 'WEDNESDAY':
+    console.log('Hump Day!');
+    break;
+  case 'THURSDAY':
+    console.log('Now we are talkin!');
+    break;
+  case 'FRIDAY':
+    console.log('TGIF');
+  default: {
+    console.log('Elvis has left the building...');
+  }
+}
+// Q8 - Write a Java Script program to find whether number is Divisible by 2 and 3.
+n = prompt("Enter your fav number: "); 
+n = Number.parseInt(n);
+if(n%2==0 && n%3==0){
+    console.log("Yes the number "+ n + " is divisible by 2 and 3");
+}
+else{
+    console.log("No! the number " + n + " is not divisible by 2 and 3");
+}
+// Q9 - Print " You can Drive" or "You Cannot Drive" based age being greater than 18 using ternary operator
+let aa = (age >= 18)? "You can drive":"You cannot drive!";
 // console.log(aa);
 // // Q10- Write a program to print the marks of a student in an object using for Joop! 
 // // obj = {harry 98, rohan: 70, aakash: 73} 
