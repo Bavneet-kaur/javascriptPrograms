@@ -1,8 +1,41 @@
+/*variables(containers) are used to store data, 
+javascript variables can be declared in 4 ways:
+>>>automatically: x=6; y=9; z=x+y;
+>>>using var
+>>>using let
+>>>using const
+*/
+
+/**
+ * & Always declare variables
+ * ? var keyword was used from 1995 to 2015
+ * ? var - globally scoped while const&let - blocked scoped
+ * ? var can be updated & re-declared within it's scope
+ * ? only use var for the support of old browser or project
+ * & Before ES6 (2015), JS did not have Block Scope.JS had Global Scope and Function Scope.
+ * & ES6 introduced the two new JS keywords: let and const.These two keywords provided Block Scope in JS:
+ * ^ Variables declared with let have Block Scope
+ * ^ Variables declared with let must be Declared before use
+ * ^ Variables declared with let cannot be Redeclared in the same scope
+ * ~ Variables defined with const cannot be Redeclared
+ * ~ Variables defined with const cannot be Reassigned
+ * ~ Variables defined with const have Block Scope
+ */
+
 let a = 54;
 console.log(a);
 a = "bawa";
 console.log(a);
-/* var is globally scoped -- this can lead to bugs*/
+
+/**
+ * ? if you try to voilate the general rules for constructing names for variables (unique identifiers), 
+ * ! it thow an syntax error/(token error)
+ * * variable names are case sensitive >>  both var b = 8; and var B = 9; are different
+ */
+
+/**
+ * !var is globally scoped -- which impose problems/bugs
+ */
 var b = "this";
 var b = "means";
 console.log(b);
@@ -10,42 +43,37 @@ console.log(b);
     var b = "a change in the varibale b!";
     console.log(b);
 }
+
 /* let variables are block scoped*/
 let c = "ccc";
 {
-    let c ="bbb";
+    let c = "bbb";
 }
 // you can reassign the values
 c = 34;
 console.log(c);
-/*const variables are used for constant variables not for constant values*/
+
+// const variables must be assigned a value when they are declared
+// use const when you want to declare: array, object, function, RegExp
+/**
+ * ?It does not define a constant value. It defines a constant reference to a value.
+*/
+
 const d = "dfg";
 // d ="hgj"; --this will throw error
 console.log(d);
-/*const variables are also block scoped but they cannot be reasigned*/ 
+/*const variables are also block scoped but they cannot be reasigned*/
 {
     const d = "tyu";
     console.log(d);
 }
 console.log(d);
-console.log("I will be doing hardwork and try to manage my life problems");
-// getting upper and lower limits of number data type
-console.log("Maximum Value: ",Number.MAX_VALUE);
-console.log("Minimum Value: " ,Number.MIN_VALUE);
-console.log("Minimum Safe Value: " ,Number.MIN_SAFE_INTEGER);
-console.log("Maximum Safe Value: " ,Number.MAX_SAFE_INTEGER + 4);
-// BigInt
-var x = 989999899998999n;
-var y = BigInt(9899998999989991111111111111111);
-console.log(x + y);
-x = BigInt(Number.MAX_SAFE_INTEGER)
-var eq = 9007199254740992 === 9007199254740993;
-console.log("BigIntNum: " ,x + 5n);
-console.log(eq);
-// usage of operators
-let n = 10;
-console.log("The value of n is: ",n);
-console.log("Value of n is: ", --n);
-console.log("The value of n is: ",n);
-console.log("Value of n is: ", n++);
-console.log("The value of n is: ",n);
+
+/**
+ *& | Keyword | Scope | Redeclare | Reassign | Hoisted | Binds this |
+ *& |---------|-------|-----------|----------|---------|------------|
+ *? | var     | No    | Yes       | Yes      | Yes     | Yes        |
+ *^ | let     | Yes   | No        | Yes      | No      | No         |
+ *~ | const   | Yes   | No        | No       | No      | No         |
+ */
+
