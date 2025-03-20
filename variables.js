@@ -77,3 +77,5 @@ console.log(d);
  *~ | const   | Yes   | No        | No       | No      | No         |
  */
 
+// *Note: "=" is called assignment operator which is used to assign the value/data while 
+// *Note: "==" is called equal to operator which is used to compare the values 
