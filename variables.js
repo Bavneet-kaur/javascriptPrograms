@@ -6,6 +6,7 @@ javascript variables can be declared in 4 ways:
 >>>using const
 */
 
+
 test = "automatically variable assigned"
 console.log(test)
 console.log("-----------")
