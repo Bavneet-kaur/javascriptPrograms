@@ -139,6 +139,37 @@ function hoistedFunc() {
 
 // *The best option would be to declare and initialise our variable before use.
 
+
+// why const allows the changing of the object properties ?
+/** 
+ **When you declare a variable with const, it means the reference (or memory address) that the variable holds cannot be changed. But the contents of that object can still be modified, because objects in JavaScript are reference types.
+*/
+const person = {
+  name: "Bavneet",
+  age: 25
+};
+
+person.age = 26; 
+console.log(person.age); // 26
+
+// person = { name: "Aman", age: 30 }; //!TypeError: Assignment to constant variable.
+// console.log(person);
+// console.log(person.name)
+
+const p = {
+  name: "Bavneet",
+  age: 25
+};
+
+Object.freeze(p);
+
+p.age = 26; 
+p.city = "Delhi"; 
+delete p.name; 
+console.log(p); 
+console.log("City: ",p.city);  //undefined
+
+
 /**
  *& | Keyword | Scope | Redeclare | Reassign | Hoisted | Binds this | Temporal Dead Zone |
  *& |---------|-------|-----------|----------|---------|------------| ------------------ |
