@@ -130,10 +130,49 @@ console.log("=== End of Comparison Operators ===");
 
 
 //* Assignment Operators are used to assign values to variables
-//* =	x = y	x = y
-//* +=	x += y	x = x + y
-//* -=	x -= y	x = x - y
-//* *=	x *= y	x = x * y
-//* /=	x /= y	x = x / y
-//* %=	x %= y	x = x % y
+// =	x = y	x = y
+// +=	x += y	x = x + y
+// -=	x -= y	x = x - y
+// *=	x *= y	x = x * y
+// /=	x /= y	x = x / y
+// %=	x %= y	x = x % y
 // **=	x **= y	x = x ** y
+
+let ass1 = 10;
+let ass2 = 5;
+
+// Simple Assignment (=)
+ass1 = ass2;
+console.log("ass1 = ass2 :", ass1);
+
+// Addition Assignment (+=)
+ass1 = 10;
+ass1 += ass2; //aas1 = ass1 + ass2
+console.log("ass1 += ass2 :", ass1); // 15 (10 + 5)
+
+// Subtraction Assignment (-=)
+ass1 = 10;
+ass1 -= ass2;
+console.log("ass1 -= ass2 :", ass1); // 5 (10 - 5)
+
+// Multiplication Assignment (*=)
+ass1 = 10;
+ass1 *= ass2;
+console.log("ass1 *= ass2 :", ass1); // 50 (10 * 5)
+
+// Division Assignment (/=)
+ass1 = 10;
+ass1 /= ass2;
+console.log("ass1 /= ass2 :", ass1); // 2 (10 / 5)
+
+// Modulus Assignment (%=)
+ass1 = 10;
+ass1 %= ass2;
+console.log("ass1 %= ass2 :", ass1); // 0 (10 % 5)
+
+// Exponentiation Assignment (**=)
+ass1 = 2;
+ass1 **= ass2;
+console.log("ass1 **= ass2 :", ass1); // 32 (2^5)
+
+console.log("=== End of Assignment Operators ===");
