@@ -35,6 +35,7 @@ let b1 = 11, b2 = 21;
 console.log("Sum(c): ", c)
 console.log("sum of two numbers: ", 80 + 90);
 console.log("The result of the expression: ",(100 + 50) * 10);
+console.log("'Hello' + ' World' =", "Hello" + " World"); // usage of '+' opeartor String concatenation
 console.log("Sum(d): ",d);
 console.log("Subtract(a - b): ", a - b);
 console.log("Multiply(a * b): ", a * b);
@@ -42,11 +43,17 @@ console.log("Division(a / b): ", a / b);
 console.log("Modulus(a % b): ", a % b);
 console.log("Exponential(a ** b): ", 3 ** 2);
 //if the increment operator(similar for decrement operator) is used before operand/varibale with a value then it will increase the value by 1
-console.log("Increment(++a1): ", ++a1); 
+console.log("'a1' before increment:", a1);
+console.log("'a1++' (post-increment):", a1++); // returns 10, then a1 becomes 11 (in the cached memory)
+console.log("'a1' after post-increment:", a1);
+a1 = 10;
 //if the increment operator(similar for decrement operator) is used after operand/varibale with a value then the value remains same
-console.log("Increment(a2++): ", a2++); //increases the number in the cached memory 
-console.log("Decrement(--b1): ", --b1); 
-console.log("Decrement(b2--): ", b2--);
+console.log("b1 before decrement:", b1);
+console.log("b1-- (post-decrement):", b1--); // returns 11, then b1 becomes 10
+console.log("b1 after post-decrement:", b1);
+b1 = 11;
+console.log("--b1 (pre-decrement):", --b1); // decrements first → 4
+
 //* Operator precedence describes the order in which operations are performed in an arithmetic expression.
 let x = 100 + 50 * 3; 
 console.log(x); //multipication is done first >> addition
@@ -60,6 +67,23 @@ x = 100 + 50 - 3;
 console.log(x); 
 x = 100 / 50 * 3;
 console.log(x); 
+
+
+let num = 7; 
+console.log("Unary negation -num:", -num); // unary negation
+
+// unary plus
+let strNum = "123";
+console.log("typeof strNum:", typeof strNum); 
+console.log("Unary plus +strNum:", +strNum);  // converts thr string to number
+console.log("typeof +strNum:", typeof +strNum); 
+
+//Special cases
+console.log("10 / 0 =", 10 / 0); 
+console.log("-10 / 0 =", -10 / 0); 
+console.log("0 / 0 =", 0 / 0);
+
+console.log("=== End of Arithmetic Operators ===");
 
 //* Assignment Operators are used to assign values to variables
 //* =	x = y	x = y
