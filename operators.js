@@ -67,23 +67,67 @@ x = 100 + 50 - 3;
 console.log(x); 
 x = 100 / 50 * 3;
 console.log(x); 
-
-
 let num = 7; 
 console.log("Unary negation -num:", -num); // unary negation
-
 // unary plus
 let strNum = "123";
 console.log("typeof strNum:", typeof strNum); 
 console.log("Unary plus +strNum:", +strNum);  // converts thr string to number
 console.log("typeof +strNum:", typeof +strNum); 
-
 //Special cases
 console.log("10 / 0 =", 10 / 0); 
 console.log("-10 / 0 =", -10 / 0); 
 console.log("0 / 0 =", 0 / 0);
-
 console.log("=== End of Arithmetic Operators ===");
+
+//*Comparison Operators
+let c1 = 10, c2 = "10", c3 = 20; c4 = 20;
+// Equal to (==) Compares values but not types (performs type coercion).
+console.log("Not Strict Equal to c1 == c2:", c1 == c2); 
+console.log("Not Strict Equal to c1 == c3:", c1 == c3);
+
+// Strict Equal (===) Compares both value and type.
+console.log("Strict Equal to c1 === c2:", c1 === c2); 
+console.log("Strict Equal to c1 === c3:", c1 === c3);
+console.log("Strict Equal to c3 === c3:", c3 === c3);
+console.log("Strict Equal to c4 === c3:", c4 === c3);
+
+// Not Equal (!=) Compares values but not types (type coercion applied).
+console.log("a != c :", a != c);
+console.log("a != b :", a != b);
+
+// Strict Not Equal (!==) Compares both value and type.
+console.log("a !== c :", a !== c); 
+console.log("a !== 10 :", a !== 10);
+
+// Greater Than (>) Checks if left is greater than right.
+console.log("b > a :", b > a);
+console.log("a > b :", a > b);
+
+// Less Than (<) Checks if left is smaller than right.
+console.log("a < b :", a < b);
+console.log("b < a :", b < a);
+
+// Greater Than or Equal To (>=)
+console.log("a >= 10 :", a >= 10); 
+console.log("a >= b :", a >= b);   
+
+// Less Than or Equal To (<=)
+console.log("b <= 20 :", b <= 20); 
+console.log("a <= 5 :", a <= 5);   
+
+// Special Case: Comparisons with NaN
+console.log("NaN == NaN :", NaN == NaN);  
+console.log("NaN === NaN :", NaN === NaN); 
+console.log("isNaN(NaN) :", isNaN(NaN));   
+
+// String Comparisons (lexicographical order based on Unicode values)
+console.log("'apple' < 'banana' :", "apple" < "banana");  
+console.log("'Zebra' < 'apple' :", "Zebra" < "apple");     //(uppercase < lowercase in Unicode)
+console.log("'2' < '10' :", "2" < "10");                   //(lexicographical comparison, "2" > "1")
+
+console.log("=== End of Comparison Operators ===");
+
 
 //* Assignment Operators are used to assign values to variables
 //* =	x = y	x = y
