@@ -176,3 +176,39 @@ ass1 **= ass2;
 console.log("ass1 **= ass2 :", ass1); // 32 (2^5)
 
 console.log("=== End of Assignment Operators ===");
+//* Logical Operators
+let l1 = true;
+let l2 = false;
+
+// Logical AND (&&)
+console.log("l1 && l2 :", l1 && l2); 
+console.log("l1 && true :", l1 && true); 
+
+// Logical OR (||)
+console.log("l1 || l2 :", l1 || l2);
+console.log("l2 || false :", l2 || false); 
+
+// Logical NOT (!)
+console.log("!l1 :", !l1); 
+console.log("!l2 :", !b); 
+
+// Double NOT (!!) converts value to boolean
+console.log("!!l1 :", !!l1); 
+console.log("!!0 :", !!0); 
+console.log("!!'Hello' :", !!"Hello"); 
+
+// Logical AND with non-boolean values
+console.log("'Hello' && 123 :", "Hello" && 123); 
+console.log("0 && 'Hello' :", 0 && "Hello"); 
+// Logical OR with non-boolean values
+console.log("'Hello' || 123 :", "Hello" || 123); 
+console.log("0 || 'Hello' :", 0 || "Hello"); 
+
+// Nullish coalescing (??)
+let l3 = null;
+let l4 = "Default";
+console.log("l3 ?? l4 :", l3 ?? l4); 
+console.log("undefined ?? l4 :", undefined ?? l4); 
+console.log("0 ?? l4 :", 0 ?? l4); // 0 (0 is not null/undefined)
+
+console.log("=== End of Logical Operators ===");
