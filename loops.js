@@ -65,6 +65,59 @@ do {
     console.log(i);
     i++;
 } while (i < 3);
+
+//*usage of 'break' and 'continue' keyword
+//The break statement terminates the current loop or switch statement and transfers program control to the statement following the terminated statement. 
+console.log("======usage of 'break' keyword========")
+//Purpose: Immediately exits the loop (stops it completely).
+// Use case: When you want to stop looping once a certain condition is met.
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        break; // exit the loop when i = 5
+    }
+    console.log(i);
+}
+
+let w1 = 0;
+while (w1 < 6) {
+  if (w1 === 4) {
+    break;
+  }
+  w1 += 1;
+}
+console.log("Value of'w1'",w1);
+//It can also be used to jump past a labeled statement when used within that labeled statement.
+//A labeled statement is any statement that is prefixed with an identifier. You can jump to this label using a break or continue statement nested within the labeled statement.
+// Without the label, break would only stop the inner loop only. With break outerLoop;, we jump out of the outer loop completely.
+outerLoop: for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        if (i === 2 && j === 2) {
+            break outerLoop; // exits the *outer* loop, not just inner
+        }
+        console.log(i, j);
+    }
+}
+console.log("======usage of 'continue' keyword========")
+//The continue statement terminates execution of the statements in the current iteration of the current or labeled loop, and continues execution of the loop with the next iteration.
+
+// Purpose: Skips the current iteration and jumps to the next one.
+// Use case: When you want to ignore some values but still continue looping.
+for (let i = 1; i <= 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+console.log(i);
+}
+console.log("===========================")
+outerLoop: for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        if (j === 2) {
+            continue outerLoop; // skips the current i loop entirely
+        }
+        console.log(i, j);
+    }
+}
+
 // Expected output: 3
 // JavaScript doesn't care. Expression 1 is optional.
 // You can initiate many values in expression 1 (separated by comma):
