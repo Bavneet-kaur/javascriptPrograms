@@ -1,20 +1,30 @@
-let day = 2;
+//* Conditional Statements
+// use the 'if' statement bloxk when the statement is true
+console.log("=======The usage of 'if' block==========");
+let age = 18;
+if (age >= 18) {
+  console.log("Access Given");
+}
+//! Note that if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.
 
+console.log("=======The usage of 'if else' block==========");
+// Use the else if statement to specify a new condition if the first is false.
+let day = 2;
 if (day === 1) {
   console.log('Sunday');
-} 
+}
 else if (day === 2) {
   console.log('Monday');
-} 
+}
 else if (day === 3) {
   console.log('Tuesday');
 }
 
 if (4 ** 2 == 16) {
-    console.log('You were right!');
-  } else {
-    console.log('You were wrong :');
-  }
+  console.log('You were right!');
+} else {
+  console.log('You were wrong :');
+}
 console.log(2 === '2' || 2 == '2');
 
 let val = 10 ** 2;
