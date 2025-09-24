@@ -95,3 +95,25 @@ switch (day) {
   default:
     console.log("Looking forward to the Weekend");
 }
+
+function processUser(user) {
+  if (user) {
+    if (user.isActive) {
+      console.log("Processing user:", user.name);
+    } else {
+      console.log("User is not active.");
+    }
+  } else {
+    console.log("No user found.");
+  }
+}
+// This works, but it’s deeply nested and harder to follow.
+
+
+// The early return pattern is a coding style where you exit a function as soon as a condition is met, instead of nesting multiple if/else statements.It makes code:Easier to read, Less nested (avoids “pyramid of doom”), Faster to short-circuit execution when unnecessary
+function processUser(user) {
+  if (!user) return console.log("No user found.");
+  if (!user.isActive) return console.log("User is not active.");
+
+  console.log("Processing user:", user.name);
+}
