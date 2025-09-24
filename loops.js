@@ -46,11 +46,25 @@ console.log("Sum of" + " " + n + " " + "natural numbers: ", sum);
 console.log("======while Loop========")
 let w = 0;
 while (w < 3) {
-  w++;
+    w++;
 }
 console.log(w);
 
+//* do-while loop
+console.log("======do...while Loop========")
+// The do while loop is a variant of the while loop.The do while loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+/**
+ * do {
+// code block to be executed
+}
+while (condition);
+ */
 
+let i = 3;
+do {
+    console.log(i);
+    i++;
+} while (i < 3);
 // Expected output: 3
 // JavaScript doesn't care. Expression 1 is optional.
 // You can initiate many values in expression 1 (separated by comma):
