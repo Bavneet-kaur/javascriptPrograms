@@ -1,7 +1,7 @@
 //* Functions 
 // functions are fundamental building blocks in all programming.Functions enable better code organization, modularity, and efficiency.Functions are reusable block of code designed to perform a particular task.Functions execute when they are "called" or "invoked".
 
-console.log("==========Function Declarations===========");
+console.log("==========Function Declarations==========="); //named functions 
 function control (){
   console.log("I've full control!")
 }
@@ -10,7 +10,17 @@ control();
 for(let i = 1; i <= 5; i++){
   control();
 }
+//* Function Expression 
+console.log("==========Function Expression==========="); //anonymous functions
+const greet = function() { //greet is the name of the function
+  console.log("Hello from expression!");
+};
+greet(); 
 
+//* Arrow Functionsx 
+console.log("==========Arrow Functions==========="); //fat-arrow functions
+const g = () => console.log("Hello from arrow!");
+g();
 
 // function onePlusAvg(x, y) {
 //   return 1 + (x + y) / 2;
