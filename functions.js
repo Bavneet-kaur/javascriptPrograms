@@ -108,6 +108,29 @@ function canVote(age) {
 console.log(canVote(-5));  
 console.log(canVote(15)); 
 console.log(canVote(20));  
+
+//* first-class functions
+console.log("==========First Class Functions==========="); 
+const sayHi = function(){ // funtions as variables
+  console.log("Say Hello!")
+}
+sayHi(); // Hi! from the toy function
+function sayHello(name){ // funtions as arguments
+  console.log("Say Hello!" + " " + name)
+}
+sayHello('Radhika'); // passing the toy to a friend
+//* Functions Returned from Other Functions --- HOF higher order functions
+console.log("==========Higher order functions==========="); 
+function multiply(m){
+return function multiplier(num){
+  return m ** num;
+}
+}
+const double = multiply(5);
+const triple = multiply(2);
+console.log("Doubled value:",double(2));
+console.log("Triple value:", triple(3))
+
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
