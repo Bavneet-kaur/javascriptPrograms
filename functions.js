@@ -1,3 +1,17 @@
+//* Functions 
+// functions are fundamental building blocks in all programming.Functions enable better code organization, modularity, and efficiency.Functions are reusable block of code designed to perform a particular task.Functions execute when they are "called" or "invoked".
+
+console.log("==========Function Declarations===========");
+function control (){
+  console.log("I've full control!")
+}
+control();
+control();
+for(let i = 1; i <= 5; i++){
+  control();
+}
+
+
 // function onePlusAvg(x, y) {
 //   return 1 + (x + y) / 2;
 // }
@@ -38,24 +52,24 @@
 
 // console.log(foodItem.calAdvice());
 // callback functions
-function mainFunction(callback) {
-  console.log("Performing operation...");
-  // Use setTimeout to simulate an asynchronous operation
-  setTimeout(function() {
-    callback("Operation - " + (3*3));
-  }, 7000);
-  console.log("Operation performed after setTimeout function-->performed before the multipication operation")
-  }
+// function mainFunction(callback) {
+//   console.log("Performing operation...");
+//   // Use setTimeout to simulate an asynchronous operation
+//   setTimeout(function() {
+//     callback("Operation - " + (3*3));
+//   }, 7000);
+//   console.log("Operation performed after setTimeout function-->performed before the multipication operation")
+//   }
   
-  // Define the callback function
-  function callbackFunction(result) {
-  console.log("Result: " + result);
-  }
+//   // Define the callback function
+//   function callbackFunction(result) {
+//   console.log("Result: " + result);
+//   }
   
-  // Call the main function with the callback function
-  mainFunction(callbackFunction);
-  // using this keyword in functions
-  function myfunc(){
-    return this;
-  }
-  console.log(myfunc())
+//   // Call the main function with the callback function
+//   mainFunction(callbackFunction);
+//   // using this keyword in functions
+//   function myfunc(){
+//     return this;
+//   }
+//   console.log(myfunc())
