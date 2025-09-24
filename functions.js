@@ -131,6 +131,21 @@ const triple = multiply(2);
 console.log("Doubled value:",double(2));
 console.log("Triple value:", triple(3))
 
+console.log("==========Impure and Pure Functions==========="); 
+//* Impure Functions --Output can change even if the inputs are the same.
+function getRandomNumber() {
+  return Math.random();
+}
+
+console.log(getRandomNumber()); 
+console.log(getRandomNumber());
+//*pure Functions --Always gives the same output for the same input.
+function divide(a, b) {
+  return a / b;
+}
+
+console.log(divide(2, 3)); 
+console.log(divide(2, 3));
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
