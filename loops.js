@@ -34,6 +34,24 @@ for (let i = 1; i <= n; i++) {
     sum = sum + (i);
 }
 console.log("Sum of" + " " + n + " " + "natural numbers: ", sum);
+
+//* While loop
+/**start
+ * while (condition) { 
+ * // code block to be executed 
+ * change
+ * };
+*/
+// The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.
+console.log("======while Loop========")
+let w = 0;
+while (w < 3) {
+  w++;
+}
+console.log(w);
+
+
+// Expected output: 3
 // JavaScript doesn't care. Expression 1 is optional.
 // You can initiate many values in expression 1 (separated by comma):
 // const cars = ["BMW", "Volvo", "Saab", "Ford"];
