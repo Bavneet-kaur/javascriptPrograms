@@ -79,9 +79,35 @@ num(1,2,3,4,5)
 sum(1, 2);              
 sum(1, 2, 3, 4, 5);  
 
-//^ Default parameter → gives a backup value when no argument is provided.
-//^ Rest parameter → collects all extra arguments into one array.
+// Default parameter → gives a backup value when no argument is provided.
+// Rest parameter → collects all extra arguments into one array.
 
+//* return statement 
+//The return statement ends the execution of a function and sends back a value to the place where the function was called.If no value is returned, the function returns undefined by default.
+let result = add(5, 3);
+console.log(result); // 8
+
+function test() {
+  console.log("Before return");
+  return "I’m done!";
+  console.log("After return"); //this will never execute
+}
+console.log(test());
+
+//* earlt return pattern
+function canVote(age) {
+  if (age < 0) {
+    return "Invalid age.";  // early exit
+  }
+  if (age < 18) {
+    return "You are too young to vote.";  // early exit
+  }
+  return "You can vote!";
+}
+
+console.log(canVote(-5));  
+console.log(canVote(15)); 
+console.log(canVote(20));  
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
