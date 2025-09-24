@@ -205,13 +205,19 @@ console.log("'Hello' || 123 :", "Hello" || 123);
 console.log("0 || 'Hello' :", 0 || "Hello"); 
 
 // Nullish coalescing (??)
+// nullish coalescing operator (??) is used to provide a default value when a variable is either null or undefined
+// It only checks for null and undefined (not falsy values like 0, "", or false).
 let l3 = null;
 let l4 = "Default";
 console.log("l3 ?? l4 :", l3 ?? l4); 
 console.log("undefined ?? l4 :", undefined ?? l4); 
 console.log("0 ?? l4 :", 0 ?? l4); // 0 (0 is not null/undefined)
+let age = 0;
+console.log(age ?? 18); // 0 ✅ (because 0 is NOT null or undefined)
+console.log(age || 18); // 18 ❗ (because 0 is falsy, so `||` gives 18)
 
 console.log("=== End of Logical Operators ===");
+
 //* Bitwise Operator
 let bit1 = 5;   // (0101 in binary)
 let bit2 = 3;   // (0011 in binary)
