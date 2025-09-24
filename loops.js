@@ -3,6 +3,7 @@
 // The 'for' statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop.
 // for (initialization; condition; afterthought)
 //   statement
+
 /*initialization expression will run once before executing loop*/
 /*condition for executing the code block. -- This conditional test is optional. If omitted, the condition always evaluates to true.*/
 /*afterthought is executed every time the code block has been executed  --  This occurs before the next evaluation of condition*/
@@ -18,25 +19,23 @@ for (let i = 1; i <= 5; i++) {
 }
 console.log(str); // to get the output in a straight line
 
-
-
 for (let i = 0; i < 6; i++) {
     /* if the initialization expression is equal to 0
      and condition is </<= than it will n-1 time*/
     console.log(i);
 }
-// // adding n natural numbers using for loops
-// const prompt = require("prompt-sync")({ sigint: true });
-// let sum = 0;
-// let n = prompt("Enter the value of n = ");
+// adding n natural numbers using for loops
+const prompt = require("prompt-sync")({ sigint: true });
+let sum = 0;
+let n = +prompt("Enter the value of n = ");
 // n = Number.parseInt(n);
-// for (let i = 1; i <= n; i++) {
-//     console.log(i, "+")
-//     sum = sum + (i);
-// }
-// console.log("Sum of" + " " + n + " " + "natural numbers: ", sum);
-// // JavaScript doesn't care. Expression 1 is optional.
-// // You can initiate many values in expression 1 (separated by comma):
+for (let i = 1; i <= n; i++) {
+    console.log(i)
+    sum = sum + (i);
+}
+console.log("Sum of" + " " + n + " " + "natural numbers: ", sum);
+// JavaScript doesn't care. Expression 1 is optional.
+// You can initiate many values in expression 1 (separated by comma):
 // const cars = ["BMW", "Volvo", "Saab", "Ford"];
 // let i, len, text;
 // for (i = 0, len = cars.length, text = ""; i < len; i++) {
