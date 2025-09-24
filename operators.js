@@ -212,3 +212,45 @@ console.log("undefined ?? l4 :", undefined ?? l4);
 console.log("0 ?? l4 :", 0 ?? l4); // 0 (0 is not null/undefined)
 
 console.log("=== End of Logical Operators ===");
+//* Bitwise Operator
+let bit1 = 5;   // (0101 in binary)
+let bit2 = 3;   // (0011 in binary)
+
+// AND (&) returns 1 if both bits are 1
+console.log("bit1 & bit2 =", bit1 & bit2); // 1 (0101 & 0011 → 0001)
+// OR (|) returns 1 if any bit is 1
+console.log("bit1 | bit2 =", bit1 | bit2); // 7 (0101 | 0011 → 0111)
+// XOR (^) returns 1 if bits are different
+console.log("bit1 ^ bit2 =", bit1 ^ bit2); // 6 (0101 ^ 0011 → 0110)
+// NOT (~) inverts all bits (2’s complement)
+console.log("~bit1 =", ~bit1); // -6 (inverts 0101 → 1010)
+// Left Shift (<<) shifts bits to the left
+console.log("bit1 << 1 =", bit1 << 1); // 10 (0101 << 1 → 1010)
+// Right Shift (>>) shifts bits to the right (keeps sign)
+console.log("bit1 >> 1 =", bit1 >> 1); // 2 (0101 >> 1 → 0010)
+
+// Unsigned Right Shift (>>>) shifts right, fills with 0
+let neg = -5;
+console.log("neg >>> 1 =", neg >>> 1); // 2147483645 (large number because sign bit cleared)
+
+console.log("=== End of Bitwise Operator Examples ===");
+
+//* Comma Operator
+// Comma operator evaluates each expression left to right and returns the last value
+let co = (1, 2, 3);
+console.log("co =", co); // 3 (last value is returned)
+
+// Useful in for loops: multiple expressions can run together
+for (let i = 0, j = 5; i < 3; i++, j--) {
+  console.log("i =", i, " j =", j);
+}
+
+// Combining expressions in one line
+let y = (console.log("Hello"), console.log("World"), 100);
+console.log("y =", y); // 100 (last value returned)
+
+// Nested usage (not common, but possible)
+let z = ((2 + 3), (10 * 2), (50 / 5));
+console.log("z =", z); // 10 (last expression value)
+
+console.log("=== End of Comma Operator Examples ===");
