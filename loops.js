@@ -4,6 +4,9 @@
 // for (initialization; condition; afterthought)
 //   statement
 /*initialization expression will run once before executing loop*/
+/*condition for executing the code block. -- This conditional test is optional. If omitted, the condition always evaluates to true.*/
+/*afterthought is executed every time the code block has been executed  --  This occurs before the next evaluation of condition*/
+
 console.log("======For Loop========")
 for (let i = 1; i <= 5; i++) {
     console.log(i); //console.log() always adds a newline after printing in JavaScript.
@@ -17,11 +20,11 @@ console.log(str); // to get the output in a straight line
 
 
 
-// for (let i = 0; i < 6; i++) {
-//     /* if the initialization expression is equal to 0
-//      and condition is </<= than it will n-1 time*/
-//     console.log(i);
-// }
+for (let i = 0; i < 6; i++) {
+    /* if the initialization expression is equal to 0
+     and condition is </<= than it will n-1 time*/
+    console.log(i);
+}
 // // adding n natural numbers using for loops
 // const prompt = require("prompt-sync")({ sigint: true });
 // let sum = 0;
