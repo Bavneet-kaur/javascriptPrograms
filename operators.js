@@ -254,3 +254,54 @@ let z = ((2 + 3), (10 * 2), (50 / 5));
 console.log("z =", z); // 10 (last expression value)
 
 console.log("=== End of Comma Operator Examples ===");
+
+
+/**
+ ** typeof in JavaScript Purpose: 
+ * Returns a string that indicates the type of a variable or value.
+ *  Use case: Best for checking primitive data types.
+*/
+console.log(typeof 42);          // "number"
+console.log(typeof "hello");     // "string"
+console.log(typeof true);        // "boolean"
+console.log(typeof undefined);   // "undefined"
+console.log(typeof null);        // "object"   // ❗ quirk in JS
+console.log(typeof Symbol());    // "symbol"
+console.log(typeof BigInt(10));  // "bigint"
+
+// For functions and objects:
+console.log(typeof {});          // "object"
+console.log(typeof []);          // "object" ❗ arrays are objects
+console.log(typeof function(){}); // "function"
+
+/**
+ ** instanceof in JavaScript
+ * Purpose: Checks if an object is an instance of a particular constructor or class.
+ * Use case: Best for checking complex/reference types.
+*/
+
+let arr = [1, 2, 3];
+let date = new Date();
+
+console.log(arr instanceof Array);     // true
+console.log(arr instanceof Object);    // true (Array inherits from Object)
+console.log(date instanceof Date);     // true
+console.log(date instanceof Object);   // true
+
+function Person(name) {
+  this.name = name;
+}
+let p1 = new Person("Bavneet");
+
+console.log(p1 instanceof Person);  // true
+console.log(p1 instanceof Object);  // true
+
+//* comparing both instanceof and typeof 
+let str = "hello";
+let r = [1, 2, 3];
+
+console.log(typeof str);        // "string"
+console.log(str instanceof String); // false (primitive string, not String object)
+
+console.log(typeof r);        // "object"
+console.log(r instanceof Array); // true
