@@ -1,4 +1,6 @@
 //* Javascript operators are used to perform different types of mathematical and logical computations.
+// The values that are considered "falsy" (which means they evaluate to false in a Boolean context) in JavaScript are: false, 0, -0, "", null, undefined, NaN
+
 /**There are different types of JavaScript operators:
 
 Arithmetic Operators 
