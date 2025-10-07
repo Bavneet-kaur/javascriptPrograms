@@ -275,6 +275,7 @@ console.log("==========IIFE – Immediately Invoked Function Expression=========
 })();
 
 console.log("==========Hoisting==========="); 
+//Declarartions are hoisted  but the expressions are not hoisted
 Hoist();
 // Hosited(); //!ReferenceError: Cannot access 'Hosited' before initialization
 function Hoist(){
