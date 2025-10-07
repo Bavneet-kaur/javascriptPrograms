@@ -268,6 +268,11 @@ function outer(){
 }
 let m = outer();
 m();
+console.log("==========IIFE – Immediately Invoked Function Expression==========="); 
+//The function above is actually an anonymous self-invoking function (function without name).
+(function (){
+  console.log("Runssssssss Immediately!")
+})();
 
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
