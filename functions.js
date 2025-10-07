@@ -274,6 +274,16 @@ console.log("==========IIFE – Immediately Invoked Function Expression=========
   console.log("Runssssssss Immediately!")
 })();
 
+console.log("==========Hoisting==========="); 
+Hoist();
+// Hosited(); //!ReferenceError: Cannot access 'Hosited' before initialization
+function Hoist(){
+  console.log("Hoisted Function!")
+}
+
+let Hosited = function(){
+  console.log("Not Hoisted!")
+}
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
