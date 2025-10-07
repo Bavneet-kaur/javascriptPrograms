@@ -147,6 +147,25 @@ function divide(a, b) {
 console.log(divide(2, 3)); 
 console.log(divide(2, 3));
 
+console.log("==========Lexical Scoping==========="); 
+//* Lexical(Rishtedar) Scoping
+//the lexical environment for a function f simply refers to the environment enclosing that function's definition in the source code. Lexical scope means: A function can access variables that are defined in its outer (parent) scope, based on where it was written in the code — not where it was called. So if you define a function inside another, the inner one can use the outer’s variables — but not the other way around.
+function A(){
+  let a = 2;
+  console.log("Value of a: ", a);
+  function B(){
+    let b = a * 3;
+    console.log("Value of b: ", b);
+    function C(){
+    let c = a * b;
+    console.log("Value of c: ",c);
+  }
+  C();
+  }
+  B();
+}
+A();
+
 console.log("==========Closure Functions==========="); 
 //A local variable is a "private" variable defined inside a function. A function can access all variables in the local scope.
 function localVar(){
@@ -249,6 +268,7 @@ function outer(){
 }
 let m = outer();
 m();
+
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
