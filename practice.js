@@ -7,7 +7,7 @@ let c = a + b;
 console.log(c); //here already sum has been made '(a + (32 + 12))'
 console.log("Hy! There I am Bavneet" + 32 + 12);
 //todo Q2 - Use type of operator to find the datatype of the string In last question
-console.log("Type of the 'c':", typeof(c));
+console.log("Type of the 'c':", typeof (c));
 //todo Q3 - Create a const object in javascript Can you change it to hold a 'number later'?
 const d = {
     name: "Bawa",
@@ -31,19 +31,34 @@ const dict = {
 };
 //todo Q6 - What will be the output of the following?
 a = 12;
-console.log("++a",++a);
-console.log("a++",a++);
-console.log("--a",--a);
-console.log("a--",a--);
-console.log("a",a);
-console.log("a--",a--);
-//todo Q7 - Write a code to calculate the BMI?
-function bmi(weight, height){
-    return weight/(height*height);
+console.log("++a", ++a);
+console.log("a++", a++);
+console.log("--a", --a);
+console.log("a--", a--);
+console.log("a", a);
+console.log("a--", a--);
+//todo Q7 - Write a code to calculate the BMI
+function bmi(weight, height) {
+    return weight / (height * height);
 }
 console.log("The Calculate BMI of the body is: ", bmi(50, 5.6));
 console.log("The Calculate BMI of the body is: ", bmi(50, 5.6).toFixed(2)); //toFixed(2) will give you 2 decimal vvalues 
 console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
+//todo Q8 - Write a code to crete the discount calculator using the HOF
+function discountCalculator(sp, discountPer) {
+    return function discountedPrice() {
+        let discount = (sp * discountPer) / 100;
+        let cp = sp - discount;
+       return {
+            finalPrice: cp,
+            discountAmount: discount
+        };
+    }
+}
+const item1 = discountCalculator(2000, 25);
+console.log("The amount to be paid: ", item1());
+const result = item1();
+console.log(`Final Price: ₹${result.finalPrice}, You saved: ₹${result.discountAmount}`);
 
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
@@ -78,7 +93,7 @@ console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 //   }
 // }
 // // Q8 - Write a Java Script program to find whether number is Divisible by 2 and 3.
-// n = prompt("Enter your fav number: "); 
+// n = prompt("Enter your fav number: ");
 // n = Number.parseInt(n);
 // if(n%2==0 && n%3==0){
 //     console.log("Yes the number "+ n + " is divisible by 2 and 3");
@@ -89,12 +104,12 @@ console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 // // Q9 - Print " You can Drive" or "You Cannot Drive" based age being greater than 18 using ternary operator
 // let aa = (age >= 18)? "You can drive":"You cannot drive!";
 // // console.log(aa);
-// // // Q10- Write a program to print the marks of a student in an object using for Joop! 
-// // // obj = {harry 98, rohan: 70, aakash: 73} 
+// // // Q10- Write a program to print the marks of a student in an object using for Joop!
+// // // obj = {harry 98, rohan: 70, aakash: 73}
 // // let mark = {harry: 98, rohan: 70, aakash: 73};
 // // let lobj = Object.keys(mark).length;
 // // /*Object.keys(mark)-- print all the key values of the object;
-// // Object.keys(mark).length -- print yhe length of the object;*/ 
+// // Object.keys(mark).length -- print yhe length of the object;*/
 // // for(let i=0;i<lobj;i++){
 // //   /*Object.keys(mark)[i] --print the keys of the object in the loop;
 // //   mark[Object.keys(mark)[i]] --print values w.r.t their keys(array function)*/
@@ -110,7 +125,7 @@ console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 // let num;
 // while(num != cn){
 //   num = prompt("Enter number of your choice - ");
-//   num = parseInt(num); 
+//   num = parseInt(num);
 //   if(cn == num){
 //     console.log("Correct Number..")
 //   }
@@ -192,14 +207,14 @@ console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 // }
 // console.log("Given array: ",sq);
 // console.log("Squared array: ",l);
-// /*Q23-Use reduce to calculate factorial of a given number from an an array of first n 
+// /*Q23-Use reduce to calculate factorial of a given number from an an array of first n
 // naturalnumbers. In being the number whose factorial needs to be calculated)'*/
 // let fac = [1,2,3, 4]
 // let f = fac.reduce((x1, x2) => {
 //   return x1 * x2
 // })
 // console.log("The factorial of the given array is: ",f)
-// /* Q24-Write a program program using prompt function to take input of age as a value 
+// /* Q24-Write a program program using prompt function to take input of age as a value
 // from the user and use alert to tell him if he can drive!*/
 // // let user = prompt("Enter your age: ");
 // // user = Number.parseInt(user);
@@ -214,9 +229,9 @@ console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 // // }
 // // Q25 - In Q24 use confirm to ask the user if he wants to see the prompt again
 
-// /*Q26 - In the previous question, use console.error to lag 
+// /*Q26 - In the previous question, use console.error to lag
 // the error if the age entered is negative*/
-// /*Q27 - Write a program to change the URL to google.com (Redirection) 
+// /*Q27 - Write a program to change the URL to google.com (Redirection)
 // if user enters a number greater than 4*/
 // /*Q28 Change the background of the page to yellow, red or any other color based on user
 // input through prompt*/
