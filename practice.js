@@ -68,10 +68,19 @@ function Counter() {
     }
 }
 const counter = Counter();
-counter();
-counter();
-counter();
-counter();
+counter(); //1
+counter(); //2
+counter(); //3
+counter(); //4
+const dCount = Counter(); //1
+//todo Q10 - Create the  pure function to transform the value
+function double(val) {
+    return (val * 2)
+}
+console.log("Doubled Value: ",double(10));
+console.log("Doubled Value: ",double(1));
+console.log("Doubled Value: ",double(100));
+
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
 // // install command: npm install prompt-sync
