@@ -167,17 +167,10 @@ for (let key in cars) {
 //     return b - a;
 //   })
 // );
-// // converting arrays to string
-// var f = fruits.toString();
-// console.log(f);
-// let n = [12, 43, 11, 9, 89];
-// console.log(n);
-// console.log(n.pop());
-// console.log(n);
-// let sh = n.shift(); /*removes the first element and returns the values*/
-// console.log(sh, n);
-// let ush = n.unshift(56); /*radds the first element and returns the values*/
-// console.log(ush, n);
+//* converting arrays to string
+let f = fruits.toString();
+console.log(f);
+
 // // using delete() array method
 // let num = [45, 12, 76, 34, 11, 90];
 // console.log(num);
