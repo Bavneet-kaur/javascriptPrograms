@@ -178,9 +178,14 @@ for (let key in cars) {
 //     return b - a;
 //   })
 // );
+console.log("\n==========converting arrays to strings==========");
 //* converting arrays to string
-let f = fruits.toString();
-console.log(f);
+let numArr = [1, 2, 3];
+console.log("Array as string:", numArr.toString()); // "1,2,3"
+console.log("Array directly printed:", String(numArr) === "1,2,3"); // true
+console.log([] + 1); // "1"
+console.log([1] + 1); // "11"
+console.log([1, 2] + 1); // "1,21"
 
 //*new Array() construtcor
 console.log("\n========== new Array() Constructor ==========");
@@ -191,6 +196,27 @@ console.log("Using new Array():", a1);
 let a2 = new Array(2);
 console.log("Array with length 2 but no elements:", a2);
 console.log("Array length:", a2.length);
+console.log("\n========== Multidimensional Arrays ==========");
+
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+console.log("Matrix:", matrix); 
+console.log("Matrix element [2][1]:", matrix[2][1]); 
+
+
+console.log("\n========== Array Comparison ==========");
+console.log([] == []); // false
+console.log([0] == [0]); // false
+// Arrays are objects; they are equal only if they reference the same instance
+let f1 = [];
+let f2 = f1;
+console.log("Same reference:", f1 == f2); // true
+// Comparison with primitives
+console.log(0 == []); // true -> [] converts to ""
+console.log("0" == []); // false
 // // using delete() array method
 // let num = [45, 12, 76, 34, 11, 90];
 // console.log(num);
