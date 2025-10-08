@@ -2,20 +2,20 @@
 // functions are fundamental building blocks in all programming.Functions enable better code organization, modularity, and efficiency.Functions are reusable block of code designed to perform a particular task.Functions execute when they are "called" or "invoked".
 
 console.log("==========Function Declarations==========="); //named functions 
-function control (){
+function control() {
   console.log("I've full control!")
 }
 control();
 control();
-for(let i = 1; i <= 5; i++){
+for (let i = 1; i <= 5; i++) {
   control();
 }
 //* Function Expression 
 console.log("==========Function Expression==========="); //anonymous functions
-const greet = function() { //greet is the name of the function
+const greet = function () { //greet is the name of the function
   console.log("Hello from expression!");
 };
-greet(); 
+greet();
 
 //* Arrow Functionsx 
 console.log("==========Arrow Functions==========="); //fat-arrow functions
@@ -36,7 +36,7 @@ console.log("One plus Average of b and c is ", onePlusAvg);
 console.log("One plus Average of b and c is ", onePlusAvg()); //NaN - adding undefined + undefined
 // onePlusAvg refers to the function object, and onePlusAvg() refers to the function result.
 
-console.log("==========Parameters & Arguments==========="); 
+console.log("==========Parameters & Arguments===========");
 // Parameters are placeholders in the function definition. Think of them as empty boxes where values will be placed when the function is called
 function meet(name) {   // "name" is a parameter
   console.log("Hello, " + name + "!");
@@ -48,27 +48,27 @@ meet(); // this will give undefined value it's like let name; when you declare a
 //The parameter is the name given to the variable declared inside the definition of a function. There are two special kinds of syntax: default and rest parameters.
 //* default parameters
 //Default parameters let you set a fallback value for a parameter if no argument is passed. Without them, missing arguments become undefined.
- function add (val1 = 0, val2 = 1) { 
+function add(val1 = 0, val2 = 1) {
   console.log(val1 + val2);
- }
+}
 
- add(23,11);
- add();
- //* rest parameters
- //Rest parameters let a function accept any number of arguments. They gather all the extra arguments into a single array. It’s written with three dots ...
-function numbers(...val){
+add(23, 11);
+add();
+//* rest parameters
+//Rest parameters let a function accept any number of arguments. They gather all the extra arguments into a single array. It’s written with three dots ...
+function numbers(...val) {
   console.log(val)
 }
-numbers(1,2,3,4,5)
+numbers(1, 2, 3, 4, 5)
 
-function num(a,b,c,...val){ //a variadic function is a function of indefinite arity, i.e., one which accepts a variable number of arguments. 
-  console.log("The value of 'val':",val);
-  console.log(a,b,c, val);
+function num(a, b, c, ...val) { //a variadic function is a function of indefinite arity, i.e., one which accepts a variable number of arguments. 
+  console.log("The value of 'val':", val);
+  console.log(a, b, c, val);
 }
-num(1,2,3,4,5)
+num(1, 2, 3, 4, 5)
 
 
- function sum(...numbers) {
+function sum(...numbers) {
   let total = 0;
   for (let num of numbers) {
     total += num;
@@ -76,12 +76,39 @@ num(1,2,3,4,5)
   console.log("Total:", total);
 }
 
-sum(1, 2);              
-sum(1, 2, 3, 4, 5);  
+sum(1, 2);
+sum(1, 2, 3, 4, 5);
 
 // Default parameter → gives a backup value when no argument is provided.
 // Rest parameter → collects all extra arguments into one array.
 
+//* Argument Objects in the function
+console.log("==========Argument Objects===========");
+//arguments is an array-like object accessible inside functions that contains the values of the arguments passed to that function.
+function arg(a,b,c){
+  console.log("c: ",arguments[2]); //third argument
+  console.log("b: ",arguments[1]); //second argument
+  console.log("a: ",arguments[0]); //first argument
+  console.log("length of the arguments: ",arguments.length)
+  arguments[2] = 33;
+  console.log("Now the value of c: ",arguments[2]); //third argument
+  console.log("length of the arguments: ",arguments.length)
+}
+arg(11,22);
+
+function longestString() {
+  let longest = "";
+  for (const arg of arguments) {
+    if (arg.length > longest.length) {
+      longest = arg;
+    }
+  }
+  return longest;
+}
+console.log(longestString("one", "three", "two")); // "three"
+
+//arguments is an array-like object, which means that arguments has a length property and properties indexed from zero, but it doesn't have Array's built-in methods like forEach() or map(). However, it can be converted to a real Array, using one of slice(), Array.from(), or spread syntax.
+console.log("==========Return Statement===========");
 //* return statement 
 //The return statement ends the execution of a function and sends back a value to the place where the function was called.If no value is returned, the function returns undefined by default.
 let result = add(5, 3);
@@ -94,7 +121,7 @@ function test() {
 }
 console.log(test());
 
-//* earlt return pattern
+//* early return pattern
 function canVote(age) {
   if (age < 0) {
     return "Invalid age.";  // early exit
@@ -105,92 +132,92 @@ function canVote(age) {
   return "You can vote!";
 }
 
-console.log(canVote(-5));  
-console.log(canVote(15)); 
-console.log(canVote(20));  
+console.log(canVote(-5));
+console.log(canVote(15));
+console.log(canVote(20));
 
 //* first-class functions
-console.log("==========First Class Functions==========="); 
-const sayHi = function(){ // funtions as variables
+console.log("==========First Class Functions===========");
+const sayHi = function () { // funtions as variables
   console.log("Say Hello!")
 }
 sayHi(); // Hi! from the toy function
-function sayHello(name){ // funtions as arguments
+function sayHello(name) { // funtions as arguments
   console.log("Say Hello!" + " " + name)
 }
 sayHello('Radhika'); // passing the toy to a friend
 //* Functions Returned from Other Functions --- HOF higher order functions
-console.log("==========Higher order functions==========="); 
-function multiply(m){
-return function multiplier(num){
-  return m ** num;
-}
+console.log("==========Higher order functions===========");
+function multiply(m) {
+  return function multiplier(num) {
+    return m ** num;
+  }
 }
 const double = multiply(5);
 const triple = multiply(2);
-console.log("Doubled value:",double(2));
+console.log("Doubled value:", double(2));
 console.log("Triple value:", triple(3))
 
-function abcd(val){
+function abcd(val) {
   val();
 }
-abcd(function(){
+abcd(function () {
   console.log("HOF")
 })
-console.log("==========Impure and Pure Functions==========="); 
+console.log("==========Impure and Pure Functions===========");
 //* Impure Functions --Output can change even if the inputs are the same.
 function getRandomNumber() {
   return Math.random();
 }
 
-console.log(getRandomNumber()); 
+console.log(getRandomNumber());
 console.log(getRandomNumber());
 //*pure Functions --Always gives the same output for the same input.
 function divide(a, b) {
   return a / b;
 }
 
-console.log(divide(2, 3)); 
+console.log(divide(2, 3));
 console.log(divide(2, 3));
 
-console.log("==========Lexical Scoping==========="); 
+console.log("==========Lexical Scoping===========");
 //* Lexical(Rishtedar) Scoping
 //the lexical environment for a function f simply refers to the environment enclosing that function's definition in the source code. Lexical scope means: A function can access variables that are defined in its outer (parent) scope, based on where it was written in the code — not where it was called. So if you define a function inside another, the inner one can use the outer’s variables — but not the other way around.
-function A(){
+function A() {
   let a = 2;
   console.log("Value of a: ", a);
-  function B(){
+  function B() {
     let b = a * 3;
     console.log("Value of b: ", b);
-    function C(){
-    let c = a * b;
-    console.log("Value of c: ",c);
-  }
-  C();
+    function C() {
+      let c = a * b;
+      console.log("Value of c: ", c);
+    }
+    C();
   }
   B();
 }
 A();
 
-console.log("==========Closure Functions==========="); 
+console.log("==========Closure Functions===========");
 //A local variable is a "private" variable defined inside a function. A function can access all variables in the local scope.
-function localVar(){
+function localVar() {
   let a = 2;
   return a * a;
 }
-console.log("Local Varibales Example: ",localVar());
+console.log("Local Varibales Example: ", localVar());
 //A global variable is a "public" variable defined outside a function. A function can access all variables in the global scope.
 let x = 2;
-function globalVar(){
+function globalVar() {
   return x * x;
 }
-console.log("Global Varubale Exmaple: ",globalVar());
+console.log("Global Varubale Exmaple: ", globalVar());
 
-function gol(){
+function gol() {
   go = 2; //Undeclared variables (created without a keyword var, let, const), are always global, even if they are created inside a function.
 }
 gol();
-console.log("The value of a (global varibale): ",go * go); 
+console.log("The value of a (global varibale): ", go * go);
 
 //* Variable Lifetime
 //Global variables live until the page is discarded, like when you navigate to another page or close the window.Local variables have short lives. They are created when the function is invoked, and deleted when the function is finished.
@@ -199,19 +226,19 @@ console.log("The value of a (global varibale): ",go * go);
 //?Suppose you want a counter variable that tracks something -- closures delimma
 // Navie Solution - global varibales
 let count = 0;
-function NavieCounter(){
+function NavieCounter() {
   count += 1;
 };
 NavieCounter();
-console.log("Counter Value(1): ",count)
+console.log("Counter Value(1): ", count)
 NavieCounter();
 NavieCounter();
-console.log("Counter Value(2): ",count)
+console.log("Counter Value(2): ", count)
 //Because 'count' is global, any code in your program can change its value at any time, even without using the NavieCounter() function. This can lead to bugs or unexpected results if other functions or scripts overwrite or tamper with 'count', so the solution could using local varibales 
-function LocalCounter(){
+function LocalCounter() {
   let count = 0;
-  count +=1;
-  console.log("Counter Value(L): ",count)
+  count += 1;
+  console.log("Counter Value(L): ", count)
 }
 LocalCounter();
 LocalCounter();
@@ -242,7 +269,7 @@ function NestedCounter() {
 //*A closure is a function bundled with its surrounding (“lexical”) environment.
 function myCounter() {
   let count = 0;
-  return function() {
+  return function () {
     count++;
     console.log("Closure counter value:", count);
     return count;
@@ -250,71 +277,71 @@ function myCounter() {
 }
 
 const coun = myCounter();
-coun(); 
-coun(); 
-coun(); 
+coun();
+coun();
+coun();
 
 //Secret Tunnel -- closures 
 function toyBox() {
   let key = "shiny key";
   function magicBag() {
-    console.log(key); 
+    console.log(key);
   }
   return magicBag;
 }
-let myBag = toyBox(); 
+let myBag = toyBox();
 myBag();
 
-function outer(){
+function outer() {
   let message = "Hi Cheero!"
-  function inner(){
-    console.log("message: ",message) // undefined
+  function inner() {
+    console.log("message: ", message) // undefined
   }
   return inner;
 }
 let m = outer();
 m();
-console.log("==========IIFE – Immediately Invoked Function Expression==========="); 
+console.log("==========IIFE – Immediately Invoked Function Expression===========");
 //The function above is actually an anonymous self-invoking function (function without name).
-(function (){
+(function () {
   console.log("Runssssssss Immediately!")
 })();
 
-console.log("==========Hoisting==========="); 
+console.log("==========Hoisting===========");
 //Declarartions are hoisted  but the expressions are not hoisted
 Hoist();
 // Hosited(); //!ReferenceError: Cannot access 'Hosited' before initialization
-function Hoist(){
+function Hoist() {
   console.log("Hoisted Function!")
 }
 
-let Hosited = function(){
+let Hosited = function () {
   console.log("Not Hoisted!")
 }
 
 
-function f(){
+function f() {
   return;
 }
 console.log(f());
 
 //*Recursive Functions
-console.log("==========Recursive Functions==========="); 
+console.log("==========Recursive Functions===========");
 //The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
 
 // function recurse() {
-  // Base condition (when to stop)/
+// Base condition (when to stop)/
 //   if (/* condition */) return;
 
-  // Recursive call (calling itself)
+// Recursive call (calling itself)
 //   recurse();
 // }
-function countDown(n){
-  if(n === 0){
+function countDown(n) {
+  if (n === 0) {
     console.log("I'm Done with you!");
     return;
   };
   console.log(n); //current value 
-  countDown(n-1);
+  countDown(n - 1);
 }
 countDown(5);
