@@ -131,6 +131,12 @@ const triple = multiply(2);
 console.log("Doubled value:",double(2));
 console.log("Triple value:", triple(3))
 
+function abcd(val){
+  val();
+}
+abcd(function(){
+  console.log("HOF")
+})
 console.log("==========Impure and Pure Functions==========="); 
 //* Impure Functions --Output can change even if the inputs are the same.
 function getRandomNumber() {
@@ -285,6 +291,12 @@ function Hoist(){
 let Hosited = function(){
   console.log("Not Hoisted!")
 }
+
+
+function f(){
+  return;
+}
+console.log(f());
 // let recursion = function (counter = 0) {
 //   if (counter < 10) {
 //     console.log(`The value of counter is ${counter}`);
