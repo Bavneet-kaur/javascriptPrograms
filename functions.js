@@ -297,42 +297,24 @@ function f(){
   return;
 }
 console.log(f());
-// let recursion = function (counter = 0) {
-//   if (counter < 10) {
-//     console.log(`The value of counter is ${counter}`);
-//     return recursion(counter + 1);
-//   }
-// };
-// const foodItem = {
-//   name: "Pizza",
-//   calories: 2035,
-//   source: "Franco Costa Pizzeria",
-// };
-// recursion(5);
-// foodItem.calAdvice = function () {
-//   return this.calories > 500 ? "Too High :(" : "Good Enough!";
-// };
 
-// console.log(foodItem.calAdvice());
-// callback functions
-// function mainFunction(callback) {
-//   console.log("Performing operation...");
-//   // Use setTimeout to simulate an asynchronous operation
-//   setTimeout(function() {
-//     callback("Operation - " + (3*3));
-//   }, 7000);
-//   console.log("Operation performed after setTimeout function-->performed before the multipication operation")
-//   }
-  
-//   // Define the callback function
-//   function callbackFunction(result) {
-//   console.log("Result: " + result);
-//   }
-  
-//   // Call the main function with the callback function
-//   mainFunction(callbackFunction);
-//   // using this keyword in functions
-//   function myfunc(){
-//     return this;
-//   }
-//   console.log(myfunc())
+//*Recursive Functions
+console.log("==========Recursive Functions==========="); 
+//The act of a function calling itself, recursion is used to solve problems that contain smaller sub-problems. A recursive function can receive two inputs: a base case (ends recursion) or a recursive case (resumes recursion).
+
+// function recurse() {
+  // Base condition (when to stop)/
+//   if (/* condition */) return;
+
+  // Recursive call (calling itself)
+//   recurse();
+// }
+function countDown(n){
+  if(n === 0){
+    console.log("I'm Done with you!");
+    return;
+  };
+  console.log(n); //current value 
+  countDown(n-1);
+}
+countDown(5);
