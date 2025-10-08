@@ -182,6 +182,15 @@ for (let key in cars) {
 let f = fruits.toString();
 console.log(f);
 
+//*new Array() construtcor
+console.log("\n========== new Array() Constructor ==========");
+let a1 = new Array("Apple", "Pear", "etc");
+console.log("Using new Array():", a1);
+
+//! Be careful: single numeric argument creates an empty array with that length
+let a2 = new Array(2);
+console.log("Array with length 2 but no elements:", a2);
+console.log("Array length:", a2.length);
 // // using delete() array method
 // let num = [45, 12, 76, 34, 11, 90];
 // console.log(num);
