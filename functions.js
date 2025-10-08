@@ -345,3 +345,15 @@ function countDown(n) {
   countDown(n - 1);
 }
 countDown(5);
+//not avaiable for fat arrow functions;Not synced in strict mode or with rest, default, destructured params
+//*Scope and Function Stack
+console.log("==========Scope===========");
+//A space or environment in which a particular variable or function can be accessed or used. Accessibility of this variable or function depends on where it is defined.
+/**JavaScript has the following kinds of scopes:
+1. Global scope: The default scope for all code running in script mode.
+2. Module scope: The scope for code running in module mode.
+3. Function scope: The scope created with a function.
+4. Block scope: The scope created with a pair of curly braces (a block).
+ */
+console.log("==========Function Stack (Call stack)===========");
+// The function stack is how the interpreter keeps track of its place in a script that calls multiple functions, like which function is currently executing and which functions within that function are being called.
