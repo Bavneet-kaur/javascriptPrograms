@@ -49,7 +49,7 @@ function discountCalculator(sp, discountPer) {
     return function discountedPrice() {
         let discount = (sp * discountPer) / 100;
         let cp = sp - discount;
-       return {
+        return {
             finalPrice: cp,
             discountAmount: discount
         };
@@ -59,7 +59,19 @@ const item1 = discountCalculator(2000, 25);
 console.log("The amount to be paid: ", item1());
 const result = item1();
 console.log(`Final Price: ₹${result.finalPrice}, You saved: ₹${result.discountAmount}`);
-
+//todo Q9 - Build the counter using the closure function
+function Counter() {
+    let count = 0;
+    return function plus() {
+        count += 1;
+        return console.log("The value of counter: ", count)
+    }
+}
+const counter = Counter();
+counter();
+counter();
+counter();
+counter();
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
 // // install command: npm install prompt-sync
