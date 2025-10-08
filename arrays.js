@@ -82,12 +82,23 @@ console.log("After pushing:", names);
 // Because arrays are reference types, both arr and names point to the same data in memory.
 console.log("\n===========Arrays are Actually Objects===========");
 let items = []; // Create an empty array
+console.log("Get the items array: ",items)
 // You can assign arbitrary properties (like an object)
-items[100] = 5;  // Far index, creates a "hole"
+items[10] = 5;  // Far index, creates a "hole"
 items.age = 25;    // Non-numeric property
-console.log("items.length:", items.length); // 101
-console.log("items[100]:", items[100]); // 5
+items[8] = 8;
+console.log("items.length:", items.length); // 101, length reflects the highest numeric index + 1
+console.log("Get the items array: ",items)
+console.log("items[10]:", items[10]); // 5
 console.log("items.age:", items.age);       // 25
+items.length = 5;
+console.log("Truncated array:", items);
+console.log("After truncating, items.length:", items.length); 
+console.log("After truncating Get the items array: ",items)
+//5 but there 6 elements acc to the truncated array
+console.log("Value at index 3:", items[3]); // undefined
+items.length = 0;
+console.log("Cleared array:", items); // []
 // These are *valid*, but not recommended. Adding non-numeric keys or sparse indexes breaks performance optimizations.The JavaScript engine expects arrays to be *ordered collections* (contiguous memory).If you start using them like objects, the engine stops optimizing the array’s performance.
 
 /**Avoid these array misuses:
