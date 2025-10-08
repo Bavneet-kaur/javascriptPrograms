@@ -37,6 +37,13 @@ console.log("--a",--a);
 console.log("a--",a--);
 console.log("a",a);
 console.log("a--",a--);
+//todo Q7 - Write a code to calculate the BMI?
+function bmi(weight, height){
+    return weight/(height*height);
+}
+console.log("The Calculate BMI of the body is: ", bmi(50, 5.6));
+console.log("The Calculate BMI of the body is: ", bmi(50, 5.6).toFixed(2)); //toFixed(2) will give you 2 decimal vvalues 
+console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
 
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
