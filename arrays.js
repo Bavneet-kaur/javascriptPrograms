@@ -65,6 +65,7 @@ let del = delete num[2];
 console.log(num);
 console.log(num[2]);
 console.log(del);
+<<<<<<< Updated upstream
 // using concat method
 let a1 = ["lara", 23, 65, 12];
 let a2 = [23, 45, 89];
@@ -110,82 +111,48 @@ console.log(over18);
 // console.log(user[4]);
 // /*TypeError: Cannot read properties of undefined (reading 'name')*/
 // // console.log(user[5].name);
+=======
 
-// // copying/cloning array
-// var admin = user;
-// admin[1] = {
-//     id: 2,
-//     fname: "mickey",
-//     lname: "singh"
-// // };
-// console.log("user_1: ", user[1]);
-// console.log("user_1: ", user[1].name);
-// console.log(user);
-// array methods
-// const sensorData =[
-// {
-//     id: 2,
-//     date: '22-DEC-2021',
-//     maxTemp: 31,
-//     minTemp: 19,
-// },
-// {
-//     id: 3,
-//     date: '24-DEC-2021',
-//     maxTemp: 32,
-//     minTemp: 19.5,
-// },
-// {
-//     id: 4,
-//     date: '26-DEC-2021',
-//     maxTemp: 30,
-//     minTemp: 18.5,
-// }];
-// console.log("Sensor data -- mini. and maxi. temp with respect to dates");
-// for (const data of sensorData){
-//     console.log(`${data.date} | Max: ${data.maxTemp}, Min: ${data.minTemp}`);
-// }
-// console.log("---------------------------Reversed Array------------------------");
-// for (const data of sensorData.reverse()){
-//     console.log(`${data.date} | Max: ${data.maxTemp}, Min: ${data.minTemp}`);
-// }
-// // converting strings to array and back
-// const str ='House No. 98, Philip Street, Mangrove Drive, Timberville - 800123';
-// console.log(str.split(','));
-// console.log(str.split(''));
-// // working with csv data
-// const users = `id, first_name, last_name, email, gender
-// 1, Brigg, Kauscher, bkauscher0@nsw.gov.au, Male
-// 2, Saudra, Madner, smadner1@mac.com, Female
-// 3, Willy, Birchwood, wbirchwood2@typepad.com, Female
-// 4, Jaime, Abethell, jabethell3@amazonaws.com, Male
-// 5, Kristofer, Gunton, kgunton4@globo.com, Male`;
-// const csvToArray = (csv) => {
-//     let output = [];
-//     for (const row of csv.split('\n')) {
-//     // output.push(row); /* this will only convert strings to array
-//     output.push(row.split(', ')); /*this will create different array entities*/
-//     }
-//     return output;
-// };
-// console.log(csvToArray (users));
-// console.table(csvToArray (users)); /*tabular form*/
+//* using concat method
+console.log("\n========== Array Concat ==========");
+let b1 = ["lara", 23, 65, 12];
+let b2 = [23, 45, 89];
+let b3 = [9, 90, 99, 0, "Leo", "lemon"];
+let b = b1.concat(b2, b3);
+console.log(b);
+>>>>>>> Stashed changes
 
-// // converting arrays to object using forEach iteration method
-// const convertToObj = (arr) => {
-//     let output = [];
-//     arr.forEach((elem, index) => {
-//     // Skip index 0
-//      if(index !== 0) {
-//         let obj = {};
-//         elem.forEach((elem, index) => {
-//             obj[arr[0] [index]] = elem;
-//         });
-//     output.push(obj);
-//     }
-//     });
-//     return output;
-// };
-
-// let csvToObj = convertToObj(csvToArray(users));
-// console.table(csvToObj);
+//* Array Iterations Methods - map, reduce & filter
+console.log("\n========== Array Iteration Methods==========");
+let aa = arr.map((value, index, array) => {
+  console.log(value, index, array);
+  return value + index;
+});
+console.log("NewArray(index number added): ",aa);
+let over18 = arr.filter(myFunction);
+function myFunction(value,index,array){
+    return value > 18;
+}
+console.log(over18);
+// nested arrays
+var user =[[1, 'fox'], [2,'leo'], [378]];
+/*--access different values from nested arrays--*/
+console.log(user[1][0] +" --> "+ user[0][1] +" --> "+ user[2] +" --> "+ user[3]);
+// array of objects
+var user =[
+    {
+        id: 1,
+        name: "john"
+    },
+    {
+        id: 2,
+        name: "Mike"
+    }
+];
+console.log(user);
+console.log(user[1]);
+console.log(user[1].name);
+console.log(user[4]);
+//!TypeError: Cannot read properties of undefined (reading 'name')
+// console.log(user[5].name);
+let total = nums.reduce((acc, val) => acc + val, 0);

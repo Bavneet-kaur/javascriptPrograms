@@ -81,6 +81,86 @@ console.log("Doubled Value: ",double(10));
 console.log("Doubled Value: ",double(1));
 console.log("Doubled Value: ",double(100));
 
+//todo Q7 - Write a function toBoolean(value) that returns true or false without using Boolean() directly.
+ function toBoolean(value){
+    return !!value;
+ }
+ console.log("The value: ",toBoolean(0))
+ console.log("The value: ",toBoolean(1))
+ console.log("The value: ",toBoolean(true))
+
+//todo Q8 - Given a1 = "5" and a2 = 2, show all results of +, -, *, /, ==, === and explain each.
+let a1 = "5";
+let a2 = 2;
+console.log("The value of 'a1 + a2': ", a1 + a2); //concatenation 
+console.log("The value of 'a1 - a2': ", a1 - a2); //coercion '5'
+console.log("The value of 'a1 * a2': ", a1 * a2); //coercion
+console.log("The value of 'a1 / a2': ", a1 / a2); //coercion
+console.log("The value of 'a1 == a2': ", a1 ==  a2);
+console.log("The value of 'a1 === a2': ", a1 === a2);
+
+//todo Q9 - Write isEmptyString(str) that returns true when str is null, undefined, empty, or only spaces.
+function isEmptyString(str) {
+  if (str === null) return true;          // null or undefined
+  if (typeof str !== "string") return false;
+  return str.trim() === "";
+}
+console.log(isEmptyString());
+console.log(isEmptyString(""));
+console.log(isEmptyString("lalal"));
+console.log(isEmptyString(0));
+
+//todo Q10 - Implement safeDivide(a, b) that returns "Infinity" string when division by zero happens.
+function safeDivide(a,b){
+    if( b === 0 ) return "Infinity";
+    return a / b;
+}
+console.log("The value of '10/2': ",safeDivide(10,2));
+console.log("The value of '10/3': ",safeDivide(10,3));
+console.log("The value of '10/0': ",safeDivide(10,0));
+
+//todo Q11 - Write a snippet that demonstrates the difference between var, let, and const inside a block.
+function safeLog(label, fn) {
+    try {
+        console.log(label, fn());
+    } catch (e) {
+        console.error(label, e.message);
+    }
+}
+
+{
+    let v1 = 1;
+    const v2 = 2;
+    var v3 = 3;
+}
+
+safeLog("v1:", () => v1);
+safeLog("v2:", () => v2);
+safeLog("v3:", () => v3);
+
+//todo Q12 - Implement a small script that logs whether a value is primitive or reference.
+function isPrimitive(value){
+    return value !== Object(value)
+}
+console.log(isPrimitive(10));       
+console.log(isPrimitive("hello"));   
+console.log(isPrimitive(null));     
+console.log(isPrimitive({}));        
+console.log(isPrimitive([]));  
+
+//todo Q13 - Given value, log its type in a more precise way than typeof, including arrays and null
+function getExactType(value) {
+  if (value === null) return "null";
+  if (Array.isArray(value)) return "array";
+  return typeof value;
+}
+console.log("TypeOf value - 'null': ",getExactType(null));
+console.log("TypeOf value - '[]': ",getExactType([]));
+console.log("TypeOf value - '{}': ",getExactType({}));
+console.log("TypeOf value - 'hello': ",getExactType('hello'));
+console.log("TypeOf value - '10': ",getExactType(10));
+console.log("TypeOf value - '9n': ",getExactType(9n));
+console.log("TypeOf value - '() => {}': ",getExactType(() => {}));
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
 // // install command: npm install prompt-sync
