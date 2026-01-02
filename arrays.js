@@ -65,53 +65,6 @@ let del = delete num[2];
 console.log(num);
 console.log(num[2]);
 console.log(del);
-<<<<<<< Updated upstream
-// using concat method
-let a1 = ["lara", 23, 65, 12];
-let a2 = [23, 45, 89];
-let a3 = [9, 90, 99, 0, "Leo", "lemon"];
-let a = a1.concat(a2, a3);
-console.log(a);
-// for-in loop within array(not recommended because array works with indexes)
-let numb = [32, 84, 76, 98, 10];
-for (let i of numb) {
-  console.log(numb);
-}
-let arr = [45, 23, 21,12,9,90];
-// Array map method
-let aa = arr.map((value, index, array) => {
-  console.log(value, index, array);
-  return value + index;
-});
-console.log("NewArray(index number added): ",aa);
-// filter function/method
-let over18 = arr.filter(myFunction);
-function myFunction(value,index,array){
-    return value > 18;
-}
-console.log(over18);
-// nested arrays
-// var user =[[1, 'fox'], [2,'leo'], [378]];
-// /*--access different values from nested arrays--*/
-// console.log(user[1][0] +" --> "+ user[0][1] +" --> "+ user[2] +" --> "+ user[3]);
-// // array of objects
-// var user =[
-//     {
-//         id: 1,
-//         name: "john"
-//     },
-//     {
-//         id: 2,
-//         name: "Mike"
-//     }
-// ];
-// console.log(user);
-// console.log(user[1]);
-// console.log(user[1].name);
-// console.log(user[4]);
-// /*TypeError: Cannot read properties of undefined (reading 'name')*/
-// // console.log(user[5].name);
-=======
 
 //* using concat method
 console.log("\n========== Array Concat ==========");
@@ -120,7 +73,6 @@ let b2 = [23, 45, 89];
 let b3 = [9, 90, 99, 0, "Leo", "lemon"];
 let b = b1.concat(b2, b3);
 console.log(b);
->>>>>>> Stashed changes
 
 //* Array Iterations Methods - map, reduce & filter
 console.log("\n========== Array Iteration Methods==========");
