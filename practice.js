@@ -6,8 +6,10 @@ let b = 32 + 12;
 let c = a + b;
 console.log(c); //here already sum has been made '(a + (32 + 12))'
 console.log("Hy! There I am Bavneet" + 32 + 12);
+
 //todo Q2 - Use type of operator to find the datatype of the string In last question
 console.log("Type of the 'c':", typeof (c));
+
 //todo Q3 - Create a const object in javascript Can you change it to hold a 'number later'?
 const d = {
     name: "Bawa",
@@ -16,11 +18,13 @@ const d = {
 };
 console.log(d);
 //! d = 32;   /*this will throw an error*/
+
 //todo Q4 - Try to add a new key to the Const object in Problem 3 were you able to do it?
 d['friend'] = 'amar';
 console.log(d);
 d['name'] = "loka";
 console.log(d);
+
 //todo Q5 - Write a Js program to create a word - meaning dictionary of 5 words.
 const dict = {
     appreciate: 'value',
@@ -29,6 +33,7 @@ const dict = {
     lemon: 'citrus yellow fruit',
     ear: 'part of the body'
 };
+
 //todo Q6 - What will be the output of the following?
 a = 12;
 console.log("++a", ++a);
@@ -37,6 +42,7 @@ console.log("--a", --a);
 console.log("a--", a--);
 console.log("a", a);
 console.log("a--", a--);
+
 //todo Q7 - Write a code to calculate the BMI
 function bmi(weight, height) {
     return weight / (height * height);
@@ -44,6 +50,7 @@ function bmi(weight, height) {
 console.log("The Calculate BMI of the body is: ", bmi(50, 5.6));
 console.log("The Calculate BMI of the body is: ", bmi(50, 5.6).toFixed(2)); //toFixed(2) will give you 2 decimal vvalues 
 console.log("The Calculate BMI of the body is: ", Math.round(bmi(50, 5.6)));
+
 //todo Q8 - Write a code to crete the discount calculator using the HOF
 function discountCalculator(sp, discountPer) {
     return function discountedPrice() {
@@ -59,6 +66,7 @@ const item1 = discountCalculator(2000, 25);
 console.log("The amount to be paid: ", item1());
 const result = item1();
 console.log(`Final Price: ₹${result.finalPrice}, You saved: ₹${result.discountAmount}`);
+
 //todo Q9 - Build the counter using the closure function
 function Counter() {
     let count = 0;
@@ -73,6 +81,7 @@ counter(); //2
 counter(); //3
 counter(); //4
 const dCount = Counter(); //1
+
 //todo Q10 - Create the  pure function to transform the value
 function double(val) {
     return (val * 2)
@@ -81,7 +90,7 @@ console.log("Doubled Value: ",double(10));
 console.log("Doubled Value: ",double(1));
 console.log("Doubled Value: ",double(100));
 
-//todo Q7 - Write a function toBoolean(value) that returns true or false without using Boolean() directly.
+//todo Q11 - Write a function toBoolean(value) that returns true or false without using Boolean() directly.
  function toBoolean(value){
     return !!value;
  }
@@ -89,7 +98,7 @@ console.log("Doubled Value: ",double(100));
  console.log("The value: ",toBoolean(1))
  console.log("The value: ",toBoolean(true))
 
-//todo Q8 - Given a1 = "5" and a2 = 2, show all results of +, -, *, /, ==, === and explain each.
+//todo Q12 - Given a1 = "5" and a2 = 2, show all results of +, -, *, /, ==, === and explain each.
 let a1 = "5";
 let a2 = 2;
 console.log("The value of 'a1 + a2': ", a1 + a2); //concatenation 
@@ -99,7 +108,7 @@ console.log("The value of 'a1 / a2': ", a1 / a2); //coercion
 console.log("The value of 'a1 == a2': ", a1 ==  a2);
 console.log("The value of 'a1 === a2': ", a1 === a2);
 
-//todo Q9 - Write isEmptyString(str) that returns true when str is null, undefined, empty, or only spaces.
+//todo Q13 - Write isEmptyString(str) that returns true when str is null, undefined, empty, or only spaces.
 function isEmptyString(str) {
   if (str === null) return true;          // null or undefined
   if (typeof str !== "string") return false;
@@ -110,7 +119,7 @@ console.log(isEmptyString(""));
 console.log(isEmptyString("lalal"));
 console.log(isEmptyString(0));
 
-//todo Q10 - Implement safeDivide(a, b) that returns "Infinity" string when division by zero happens.
+//todo Q14 - Implement safeDivide(a, b) that returns "Infinity" string when division by zero happens.
 function safeDivide(a,b){
     if( b === 0 ) return "Infinity";
     return a / b;
@@ -119,7 +128,7 @@ console.log("The value of '10/2': ",safeDivide(10,2));
 console.log("The value of '10/3': ",safeDivide(10,3));
 console.log("The value of '10/0': ",safeDivide(10,0));
 
-//todo Q11 - Write a snippet that demonstrates the difference between var, let, and const inside a block.
+//todo Q15 - Write a snippet that demonstrates the difference between var, let, and const inside a block.
 function safeLog(label, fn) {
     try {
         console.log(label, fn());
@@ -138,7 +147,7 @@ safeLog("v1:", () => v1);
 safeLog("v2:", () => v2);
 safeLog("v3:", () => v3);
 
-//todo Q12 - Implement a small script that logs whether a value is primitive or reference.
+//todo Q16 - Implement a small script that logs whether a value is primitive or reference.
 function isPrimitive(value){
     return value !== Object(value)
 }
@@ -148,7 +157,7 @@ console.log(isPrimitive(null));
 console.log(isPrimitive({}));        
 console.log(isPrimitive([]));  
 
-//todo Q13 - Given value, log its type in a more precise way than typeof, including arrays and null
+//todo Q17 - Given value, log its type in a more precise way than typeof, including arrays and null
 function getExactType(value) {
   if (value === null) return "null";
   if (Array.isArray(value)) return "array";
@@ -161,6 +170,70 @@ console.log("TypeOf value - 'hello': ",getExactType('hello'));
 console.log("TypeOf value - '10': ",getExactType(10));
 console.log("TypeOf value - '9n': ",getExactType(9n));
 console.log("TypeOf value - '() => {}': ",getExactType(() => {}));
+
+//todo Q18 - Implement grading logic using if/else and then convert it to switch.
+function getGrade(val){
+    if(val >= 90) return "Grade A";
+    else if(val >= 70) return "Grade B";
+    else if(val >= 50) return "Grade C";
+    else if(val >= 30) return "Grade D";
+    else return "Grade F";
+}
+console.log("The grade: ",getGrade(87));
+console.log("The grade: ",getGrade(7));
+console.log("The grade: ",getGrade(90));
+
+//convert the above situation into switch case 
+function getGradeSwitch(val){
+    switch(true){
+        case val >= 90:
+            return "Grade A";
+        case val >= 70:
+            return "Grade B";
+        case val >= 50:
+            return "Grade C";
+        case val >= 30:
+            return "Grade D";
+        default:
+            return "Grade F"
+    }
+}
+console.log("The grade: ",getGradeSwitch(92));
+console.log("The grade: ",getGradeSwitch(30));
+console.log("The grade: ",getGradeSwitch(9));
+
+//todo Q19 - Write a function maxOfThree(a,b,c) using nested ternary operators.
+function maxOfThree(a,b,c){
+    return a > b
+    ? (a > c ? a : c)
+    : (b > c ? b : c)
+}
+console.log("Maximum Value: ",maxOfThree(23,89,90));
+console.log("Maximum Value: ",maxOfThree(123,99,9));
+
+//todo Q20 - Given an object config, return a default value when config.port is null or undefined using ??
+function getPort(config) {
+    return config.port ?? 3000;
+}
+console.log("The port number is:", getPort({ port: 8080 }));
+console.log("The port number is:", getPort({ port: 0 }));
+console.log("The port number is:", getPort({}));
+
+//todo Q21 - Rewrite a verbose if chain to use short‑circuiting with && / ||.
+// if (user && user.isLoggedIn) {
+//   showDashboard();
+// } else {
+//   showLogin();
+// }
+// user && user.isLoggedIn && showDashboard();
+// (!user || !user.isLoggedIn) && showLogin();
+
+//todo Q22 - Given user object that might be null, safely get user.address.city without throwing (with optional chaining).
+function getCity(user) {
+  return user?.address?.city;
+}
+console.log("The city:",getCity(null)); 
+console.log("The city: ",getCity({ address: { city: "Delhi" } })); 
 // console.log(dict);
 // // Q6 - Use logical operators to find whether the age of person lies between 10 and 20 ?
 // // install command: npm install prompt-sync
